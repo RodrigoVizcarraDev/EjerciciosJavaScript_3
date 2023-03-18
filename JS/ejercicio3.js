@@ -14,13 +14,14 @@
 
 let numeroAleatorio1;
 let numeroAleatorio2;
-let numeroApariciones = [];
+let resultadosSumas = [];
+let numeroSuma_resultadoSuma = [];
+
+let aparicionesSumas = [];
 for(let i = 1; i < 51; i++){
 
     numeroAleatorio1 = Math.floor(Math.random() * 6 + 1);
     numeroAleatorio2 = Math.floor(Math.random() * 6 + 1);
-
+    resultadosSumas.push(numeroAleatorio1 + numeroAleatorio2);
 }
-
-
 
