@@ -61,13 +61,13 @@ if (ciudades.length === 0) {
     document.write(`<h3>La lista de ciudades es: ${JSON.stringify(ciudades)}</h3>`);
 
     //Mostrando longitud del arreglo
-    document.write(`La longitud del arreglo es: ${ciudades.length}`);
+    document.write(`<p>La longitud del arreglo es: ${ciudades.length}</p> <br>`);
 
     // Escribe por pantalla el elemento que ocupa la segunda posición.
-    document.write(`Elemento posicion 2: ${ciudades[1]}`);
+    document.write(`<p>Elemento posicion 2: ${ciudades[1]}</p> <br>`);
 
     // Sustituye el elemento que ocupa la segunda posición por la ciudad de 'Barcelona'.
-    document.write(`Sustituiremos ${ciudades[1]} por Barcelona`);
+    document.write(`<p>Sustituiremos ${ciudades[1]} por Barcelona</p> <br>`);
     ciudades[1] == "Barcelona";
     
     if (ciudades.length >= 4) {
@@ -75,7 +75,9 @@ if (ciudades.length === 0) {
         // Mostrar en el documento web los ítems de las posiciones primera, tercera y última.
         document.write(`Posicion 1: ${ciudades[0]} <br>
                         Posicion 3: ${ciudades[2]} <br>
-                        Ultima posicion: ${ciudades[ciudades.length - 1]}`);
+                        Ultima posicion: ${ciudades[ciudades.length - 1]} <br>`);
     }
 
 }
+
+document.write(`Lista completa: <br> ${JSON.stringify(ciudades)}`);
