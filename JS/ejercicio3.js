@@ -14,13 +14,75 @@
 
 let numeroAleatorio1;
 let numeroAleatorio2;
-let numeroApariciones = [];
-for(let i = 1; i < 51; i++){
+let resultadoSumas = [];
+let numeroApariciones ={
+    2: [],
+    3: [],
+    4: [],
+    5: [],
+    6: [],
+    7: [],
+    8: [],
+    9: [],
+    10: [],
+    11: [],
+    12: []
+};
+
+for(let i = 0; i < 50; i++){
 
     numeroAleatorio1 = Math.floor(Math.random() * 6 + 1);
     numeroAleatorio2 = Math.floor(Math.random() * 6 + 1);
+    resultadoSumas.push(numeroAleatorio1 + numeroAleatorio2);
 
+    switch(resultadoSumas[i]){
+        case 2:
+            numeroApariciones[2]++;
+            break;
+        case 3:
+            numeroApariciones[3]++;
+            break
+        case 4:
+            numeroApariciones[4]++;
+            break
+        case 5:
+            numeroApariciones[5]++;
+            break;
+        case 6:
+            numeroApariciones[6]++;
+            break;
+        case 7:
+            numeroApariciones[7]++;
+            break;
+        case 8:
+            numeroApariciones[8]++;
+        case 9:
+            numeroApariciones[9]++;
+        case 10:
+            numeroApariciones[10]++;
+            break;
+        case 11:
+            numeroApariciones[11]++;
+            break;
+        case 12:
+            numeroApariciones[12]++;
+            break;
+    }
+    
+    
 }
 
+let tabla = '<table>';
+tabla += '<tr><th>Resultado</th><th>Apariciones</th></tr>';
+contador = 0;
+for (let i = 2; i < 13; i++) {
+  tabla += '<tr>';
+  tabla += `<td>${i}</td>`;
+  tabla += `<td>${numeroApariciones[i]}</td>`;
+  tabla += '</tr>';
+  contador++;
+}
 
+tabla += '</table>';
 
+document.write(tabla);
