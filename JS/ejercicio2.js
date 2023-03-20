@@ -6,15 +6,6 @@ Mostrar en el documento web los ítems de las posiciones primera, tercera y últ
 Añade en última posición la ciudad de París.
 Escribe por pantalla el elemento que ocupa la segunda posición.
 Sustituye el elemento que ocupa la segunda posición por la ciudad de 'Barcelona'.
-
-Paso a paso
-1- Pedir mediante prompt el nombre de ciudad al Usuario y almacenarlo en un arreglo
-2- Crear un While
-    2a Si el usuario pulsa aceptar simplemente devuelve true, entramos nuevamente al while.
-            - Dentro del while le volvemos a pedir una ciudad y la almacenamos en el arreglo
-    2b Si el usuario pulsa cancelar retorna false, condicion de while no se cumple y salimos.
-            - Al salir del while mostramos al usuario el arreglo con las ciudades
-
 */
 
 
@@ -43,7 +34,11 @@ do {
     if (!isNaN(ciudadesAgregadas)) {
         alert("Ingreso un numero");
         variableControl = confirm("Quiere volver a intentar o salir?");
-        continue;
+        if(variableControl === true){
+            continue;
+        }else{
+            break;
+        }
     } else {
         ciudades.push(ciudadesAgregadas);
     }
@@ -51,6 +46,7 @@ do {
     variableControl = confirm("Quiere agregar otra ciudad o salir|ACEPTAR O CANCELAR|?");
 
 } while (variableControl)
+
 
 if (ciudades.length === 0) {
     document.write(`<h3>No agrego ninguna ciudad</h3>`);
@@ -68,7 +64,7 @@ if (ciudades.length === 0) {
 
     // Sustituye el elemento que ocupa la segunda posición por la ciudad de 'Barcelona'.
     document.write(`<p>Sustituiremos ${ciudades[1]} por Barcelona</p> <br>`);
-    ciudades[1] == "Barcelona";
+    ciudades[1] = "Barcelona";
     
     if (ciudades.length >= 4) {
 
